@@ -6,27 +6,10 @@ const pageStyles = {
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+
+
 const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
+  marginBottom: 45,
 }
 const listItemStyles = {
   fontWeight: 300,
@@ -42,87 +25,138 @@ const linkStyle = {
   verticalAlign: "5%",
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
 
 // data
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    text: "EMBED web application (formatted for Epic integration) ",
+    url: "https://embedv2.ynhh.org/",
     color: "#E95800",
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+    text: "EMBED BUP initiation iPhone app",
+    url: "https://apps.apple.com/us/app/bup-initiation/id1574350314#?platform=iphone",
     color: "#1099A8",
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
+    text: "EMBED BUP initiation Android/Google smartphone app",
+    url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.amstonstudio.yaleembed&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341568203%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=jzB%2BX%2FHDAX1WzOvNHcKh2prMeZCJ2lI0aCduA%2FuI6ZQ%3D&reserved=0",
     color: "#BC027F",
   },
   {
-    text: "Conceptual Guides",
+    text: "EMBED on MDCalc (web version)",
     url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
     color: "#0D96F2",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+    text: "EMBED on MDCalc (app version) ",
+    url: "",
     color: "#8EB814",
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+    text: "Yale ED-Initiated Buprenorphine resources ",
+    url: "https://medicine.yale.edu/edbup/",
+    sublinks: [
+      {
+        text: "Treatment Algorithm",
+        url: "https://medicine.yale.edu/edbup/treatment/Algorithm_338052_284_42796_v2.pdf",
+        color: "#E95800",
+      },
+      {
+        text: "Diagnosing OUD ",
+        url: " https://medicine.yale.edu/edbup/assessment/Identification%20of%20OUD.%20IWP.%206.18_338466_284_42795_v2.docx",
+        color: "#1099A8",
+      },
+      {
+        text: "Clinical Opioid Withdrawal Scale (COWS) ",
+        url: "https://medicine.yale.edu/edbup/assessment/COWS_338055_284_42795_v4.pdf",
+        color: "#BC027F",
+      },
+      {
+        text: "Home Induction instructions ",
+        url: "https://medicine.yale.edu/edbup/discharge/Home_Buprenorphine_Initiation_338574_284_42799_v1.pdf",
+        color: "#0D96F2",
+      },
+      {
+        text: "Home Induction Instructions in Spanish",
+        url: "https://medicine.yale.edu/edbup/discharge/Take%20home%20bup%20for%20spanish%20translation%205.7.21%20%281%29_ESUS_413576_284_42799_v2.pdf",
+        color: "#8EB814",
+      },
+      {
+        text: "BUP Referral Form ",
+        url: "https://medicine.yale.edu/edbup/discharge/BUPRENORPHINE%20REFERRAL%20FORM_8.20.18v3_338054_284_42799_v3.docx",
+        badge: true,
+        color: "#663399",
+      },
+      {
+        text: "Screening Brief Intervention & Referral Treatment (SBIRT)  ",
+        url: "https://medicine.yale.edu/sbirt/",
+        color: "#8EB814",
+      },
+
+    ],
     color: "#663399",
   },
+  {
+    text: "EMBED NIH Collaboratory Project Page ",
+    url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Frethinkingclinicaltrials.org%2Fdemonstration-projects%2Fug3-project-pragmatic-trial-of-user-centered-clinical-decision-support-to-implement-emergency-department-initiated-buprenorphine-for-opioid-use-disorder-embed%2F&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341588189%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=WuHQoDyTj6duirKSGqLnLIThvuME5Y4SQ23pcB0dsP8%3D&reserved=0",
+    color: "#8EB814",
+  },
+  {
+    text: "EMBED Publications",
+    url: "",
+    sublinks: [
+      {
+        text: "Protocol ",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbmjopen.bmj.com%2Fcontent%2F9%2F5%2Fe028488&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341598182%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=4sNsXARqRJPCeiImgKndorNp6MQMtvEeo4lZg7%2Be%2B48%3D&reserved=0",
+        color: "#E95800",
+      },
+      {
+        text: "User-centered design ",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhumanfactors.jmir.org%2F2019%2F1%2Fe13121%2F&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341608176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Vf6ORb1PDmBCEc9REknByAMY4swRJROPgQNLlNeBnt8%3D&reserved=0",
+        color: "#1099A8",
+      },
+      {
+        text: "EHR Phenotype ",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmedinform.jmir.org%2F2019%2F4%2Fe15794&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341608176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Sl66Ht%2FNyyexy%2BpBCxwfxysqrVcIqGuLn%2BeBpUkgIV8%3D&reserved=0",
+        color: "#BC027F",
+      },
+      {
+        text: "IT integration",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Facademic.oup.com%2Fjamiaopen%2Farticle%2F2%2F4%2F434%2F5599847&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341618171%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=00pGPgDWKjcfa17GrHQ5CK4tms3uQdOa9WwG6tQu8qk%3D&reserved=0",
+        color: "#0D96F2",
+      },
+      {
+        text: "Automating the warm handoff ",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0740547219300078&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341618171%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=kxeXDg3%2F%2BKOe7BgRAyEWyt7ArV7vCEcp5W%2BBIJ%2BZn6M%3D&reserved=0",
+        color: "#8EB814",
+      },
+      {
+        text: "Pilot study/Interrupted time series ",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Ffull%2F10.1111%2Facem.14002&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341628176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CsA%2FhwqO7nI%2FmgRJq3bJNFLMjKfPn5Dt4217kQy6r40%3D&reserved=0",
+        badge: true,
+        color: "#663399",
+      }
+      ,
+      {
+        text: "Project Update",
+        url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fjpbs.hapres.com%2Fhtmls%2FJPBS_1192_Detail.html&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341628176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=PuJJiM4G6fQJh1V1TnIKalmiQPsa49oBAvPHo%2BDGpGc%3D&reserved=0",
+        badge: true,
+        color: "#663399",
+      }
+    ],
+    color: "#663399",
+  },
+  {
+    text: "EMBED NIH RePORTER ",
+    url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Freporter.nih.gov%2Fproject-details%2F9671625&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341638160%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=TAxxRD%2FGEsi545NpTJAxxs3BAVHmLL36Q679zij%2BS%2B0%3D&reserved=0",
+    color: "#BC027F",
+  },
+  {
+    text: "Clinicaltrials.gov",
+    url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT03658642&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341648154%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=hhZ%2FBwmiG38BnMjmEaXpgKSl1HOAfEPCj538%2BOrxEPY%3D&reserved=0",
+    color: "#0D96F2",
+  }
 ]
 
 // markup
@@ -130,53 +164,40 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
+
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
+                target="_blank"
                 href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
               >
                 {link.text}
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
+              {/* <p style={descriptionStyle}>{link.description}</p> */}
             </span>
+            <ul style={listStyles}>
+            {link.sublinks && link.sublinks.map((sublink)=>
+              (
+                <li key={sublink.url} style={{ ...listItemStyles, color: sublink.color }}>
+                  <span>
+                    <a
+                      style={linkStyle}
+                      target="_blank"
+                      href={`${sublink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                    >
+                      {sublink.text}
+                    </a>
+                    {/* <p style={descriptionStyle}>{link.description}</p> */}
+                  </span>
+                  </li>)
+            )}
+            </ul>
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
     </main>
   )
 }
