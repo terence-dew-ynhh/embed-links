@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop -p 3020 -S",
-    "start": "gatsby develop -p 3020 -S",
+    "develop": "gatsby develop --https --key-file ./conf/server.key --cert-file ./conf/server.crt",
+    "start": "gatsby develop --https --key-file ./conf/server.key --cert-file ./conf/server.crt",
     "build": "gatsby build",
     "serve": "gatsby serve -p 3020",
     "clean": "gatsby clean"
