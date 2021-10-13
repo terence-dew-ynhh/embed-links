@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop -p 3020 -- --https",
-    "start": "gatsby develop -p 3020",
+    "develop": "gatsby develop -p 3020 -S",
+    "start": "gatsby develop -p 3020 -S",
     "build": "gatsby build",
     "serve": "gatsby serve -p 3020",
     "clean": "gatsby clean"
