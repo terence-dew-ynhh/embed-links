@@ -8,14 +8,16 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop -H 0.0.0.0 -p 3020 --https --key-file ./conf/server.key --cert-file ./conf/server.crt",
+    "develop": "gatsby develop -p 3020",
     "start": "gatsby develop -H 0.0.0.0 -p 3020 --https --key-file ./conf/server.key --cert-file ./conf/server.crt",
     "build": "gatsby build",
     "serve": "gatsby serve -p 3020",
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@emotion/react": "^11.4.1",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.4",
     "gatsby": "^3.13.1",
     "gatsby-plugin-material-ui": "^4.0.2",
     "gatsby-source-filesystem": "^3.14.0",

@@ -1,30 +1,37 @@
-import * as React from "react"
+import * as React from "react";
+import EmbedLogo from "../images/embedlogo.jpg";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import Typography from "@mui/material/Typography";
 
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: 7,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
+};
 
 const listStyles = {
-  marginBottom: 45,
-}
+  marginBottom: 10,
+};
 const listItemStyles = {
   fontWeight: 300,
-  fontSize: 24,
+  fontSize: 20,
   maxWidth: 560,
-  marginBottom: 30,
-}
+  marginBottom: 10,
+};
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
+};
 
+const img = {
+  height: 120,
+};
 
 // data
 const links = [
@@ -93,7 +100,6 @@ const links = [
         url: "https://medicine.yale.edu/sbirt/",
         color: "#8EB814",
       },
-
     ],
     color: "#663399",
   },
@@ -136,14 +142,13 @@ const links = [
         url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Ffull%2F10.1111%2Facem.14002&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341628176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=CsA%2FhwqO7nI%2FmgRJq3bJNFLMjKfPn5Dt4217kQy6r40%3D&reserved=0",
         badge: true,
         color: "#663399",
-      }
-      ,
+      },
       {
         text: "Project Update",
         url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fjpbs.hapres.com%2Fhtmls%2FJPBS_1192_Detail.html&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341628176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=PuJJiM4G6fQJh1V1TnIKalmiQPsa49oBAvPHo%2BDGpGc%3D&reserved=0",
         badge: true,
         color: "#663399",
-      }
+      },
     ],
     color: "#663399",
   },
@@ -156,17 +161,53 @@ const links = [
     text: "Clinicaltrials.gov",
     url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2FNCT03658642&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341648154%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=hhZ%2FBwmiG38BnMjmEaXpgKSl1HOAfEPCj538%2BOrxEPY%3D&reserved=0",
     color: "#0D96F2",
-  }
-]
+  },
+];
+
+const modal = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
+};
 
 // markup
 const IndexPage = () => {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <Modal
+        open={open}
+        onClose={()=> setOpen(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={modal}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Send me more information about how I can have EMBED in my organization:
+          </Typography>
+          
+        </Box>
+      </Modal>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 3% 0 1%",
+        }}
+      >
+        <img style={img} src={EmbedLogo} />
+        <Button variant="contained" onClick={()=> setOpen(true)}>Contact us about using EMBED</Button>
+      </Box>
       <ul style={listStyles}>
-
-        {links.map(link => (
+        {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
@@ -179,27 +220,30 @@ const IndexPage = () => {
               {/* <p style={descriptionStyle}>{link.description}</p> */}
             </span>
             <ul style={listStyles}>
-            {link.sublinks && link.sublinks.map((sublink)=>
-              (
-                <li key={sublink.url} style={{ ...listItemStyles, color: sublink.color }}>
-                  <span>
-                    <a
-                      style={linkStyle}
-                      target="_blank"
-                      href={`${sublink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-                    >
-                      {sublink.text}
-                    </a>
-                    {/* <p style={descriptionStyle}>{link.description}</p> */}
-                  </span>
-                  </li>)
-            )}
+              {link.sublinks &&
+                link.sublinks.map((sublink) => (
+                  <li
+                    key={sublink.url}
+                    style={{ ...listItemStyles, color: sublink.color }}
+                  >
+                    <span>
+                      <a
+                        style={linkStyle}
+                        target="_blank"
+                        href={`${sublink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                      >
+                        {sublink.text}
+                      </a>
+                      {/* <p style={descriptionStyle}>{link.description}</p> */}
+                    </span>
+                  </li>
+                ))}
             </ul>
           </li>
         ))}
       </ul>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
