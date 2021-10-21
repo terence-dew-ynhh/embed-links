@@ -11,7 +11,7 @@
     "develop": "gatsby develop -p 3040",
     "start": "gatsby develop -H 0.0.0.0 -p 3040 --https --key-file ./conf/server.key --cert-file ./conf/server.crt",
     "build": "gatsby build",
-    "serve": "gatsby serve -p 3020",
+    "serve": "gatsby serve -p 3040",
     "clean": "gatsby clean"
   },
   "dependencies": {
