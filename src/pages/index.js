@@ -19,24 +19,28 @@ const pageStyles = {
 };
 
 const listStyles = {
+  marginTop: 50,
+};
+
+const sublistStyles = {
   marginBottom: 10,
 };
 const listItemStyles = {
   fontWeight: 300,
-  fontSize: 20,
+  fontSize: "1.2rem",
   maxWidth: 560,
-  marginBottom: 10,
 };
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
-  fontSize: 16,
+  fontSize: "1rem",
   verticalAlign: "5%",
 };
 
 const img = {
-  height: 110,
+  width: "100%",
+  marginTop: 50,
 };
 
 const headerimg = {
@@ -44,7 +48,8 @@ const headerimg = {
 };
 
 const horizontalimg = {
-  width: 250,
+  width: 150,
+  marginTop: 50,
 };
 
 // data
@@ -61,7 +66,6 @@ const links = [
     text: "EMBED BUP initiation iPhone app",
     url: "https://apps.apple.com/us/app/bup-initiation/id1574350314#?platform=iphone",
     color: "#1099A8",
-    img: BUPinit,
   },
   {
     text: "EMBED BUP initiation Android/Google smartphone app",
@@ -72,14 +76,9 @@ const links = [
     text: "EMBED on MDCalc (web version)",
     url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.mdcalc.com%2Femergency-department-initiated-buprenorphine-opioid-use-disorder-embed&data=04%7C01%7Cterence.dew%40yale.edu%7Cec4a4484063d4b73271a08d994b7974d%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637704338502789632%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=mqyAJT45emw3rePt5ulltcleiT6xbC15ANYjDe%2F1U8M%3D&reserved=0",
     color: "#0D96F2",
-    img: MDCalc,
   },
   {
-    text: "EMBED on MDCalc (app version) ",
-    url: "https://apps.apple.com/us/app/mdcalc-medical-calculator/id1001640662",
-    color: "#8EB814",
-  },
-  {
+    header: "Additional Resources on ED-Initiated Buprenorphine",
     text: "Yale ED-Initiated Buprenorphine resources ",
     url: "https://medicine.yale.edu/edbup/",
     sublinks: [
@@ -121,7 +120,6 @@ const links = [
       },
     ],
     color: "#663399",
-    header: "Where can you find EMBED?",
   },
   {
     text: "EMBED NIH Collaboratory Project Page ",
@@ -134,7 +132,7 @@ const links = [
     url: "",
     sublinks: [
       {
-        text: "Protocol ",
+        text: "Protocol for EMBED Trial ",
         url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fbmjopen.bmj.com%2Fcontent%2F9%2F5%2Fe028488&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341598182%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=4sNsXARqRJPCeiImgKndorNp6MQMtvEeo4lZg7%2Be%2B48%3D&reserved=0",
         color: "#E95800",
       },
@@ -172,7 +170,6 @@ const links = [
       },
     ],
     color: "#663399",
-    img: Treatment,
   },
   {
     text: "EMBED NIH RePORTER ",
@@ -203,20 +200,7 @@ const IndexPage = () => {
 
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
-      <Modal
-        open={open}
-        onClose={() => setOpen(false)}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={modal}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Send me more information about how I can have EMBED in my
-            organization:
-          </Typography>
-        </Box>
-      </Modal>
+      <title>EMBED</title>
       <Box
         sx={{
           display: "flex",
@@ -225,12 +209,23 @@ const IndexPage = () => {
           padding: "0 3% 0 1%",
         }}
       >
-        <img style={headerimg} alt="topic logo" src={EmbedLogo} />
-        <h2>
-          EMBED: Tools & Resources for ED Initiation of Buprenorphine for Opioid
-          Use Disorder Patients
-        </h2>
-        <img style={headerimg} alt="topic logo" src={Emergency} />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 3% 0 1%",
+          }}
+        >
+          <img style={headerimg} alt="topic logo" src={Treatment} />
+          <img style={headerimg} alt="topic logo" src={EmbedLogo} />
+          {/* <img style={headerimg} alt="topic logo" src={Emergency} /> */}
+          <h3>
+            EMBED: Tools & Resources for ED Initiation of Buprenorphine for
+            Opioid Use Disorder Patients
+          </h3>
+        </Box>
       </Box>
       <Box>
         <p>
@@ -240,15 +235,19 @@ const IndexPage = () => {
         </p>
         <p>
           <h3>What can EMBED do?</h3>
-          EMBED guides clinicians in (1) determining a diagnosis of OUD, (2)
-          assessing withdrawal severity using COWS Scale, (3) Tools for
-          Motivational interviewing for patients not ready to accept treatment
-          and (4) determine treatment dose (5) help in automatic order entry,
-          populate clinician notes with visit summary and referral information.
+          <ol>
+            <li>Diagnose OUD</li>
+            <li>Assess withdrawal severity with the COWS scale</li>
+            <li>Motivate patient readiness to to start medication for OUD</li>
+            <li>Determine buprenorphine dosing strategy</li>
+            <li>
+              Automate EHR activities including notes, discharge instructions,
+              orders, prescriptions, and referral
+            </li>
+          </ol>
         </p>
         <p>
-          <b> Demo video of EMBED</b>
-          <br></br>
+          <h3> Demo video of EMBED</h3>
           <a
             style={linkStyle}
             target="_blank"
@@ -270,8 +269,8 @@ const IndexPage = () => {
               />
             )}
             {link.header && <h3>{link.header}</h3>}
-            {link.subheader && <h4>{link.subheader}</h4>}
-            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+            {link.subheader && <p>{link.subheader}</p>}
+            <li key={link.url} style={{ ...listItemStyles, color: "#000000" }}>
               <span>
                 {link.url !== "" ? (
                   <a
@@ -283,15 +282,15 @@ const IndexPage = () => {
                     {link.text}
                   </a>
                 ) : (
-                  <p style={linkStyle}>{link.text}</p>
+                  <h3>{link.text}</h3>
                 )}
               </span>
-              <ul style={listStyles}>
+              <ul style={sublistStyles}>
                 {link.sublinks &&
                   link.sublinks.map((sublink) => (
                     <li
                       key={sublink.url}
-                      style={{ ...listItemStyles, color: sublink.color }}
+                      style={{ ...listItemStyles, color: "#000000" }}
                     >
                       <span>
                         <a
@@ -314,11 +313,22 @@ const IndexPage = () => {
       <ul>
         <h2>Contact:</h2>
         <li>
-          For EMBED IT Installation questions, contact: Terence Dew -{" "}
-          <a href="mailto:terence.dew@yale.edu">terence.dew@yale.edu</a>
+          For EMBED IT Installation questions, contact:{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://medicine.yale.edu/profile/terence_dew/"
+          >
+            Terence Dew
+          </a>{" "}
+          - <a href="mailto:terence.dew@yale.edu">terence.dew@yale.edu</a>
         </li>
         <li>
-          For all other general questions, contact: Bidisha Nath Bidisha -{" "}
+          For all other general questions, contact:           <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://medicine.yale.edu/profile/bidisha_nath/"
+          >Bidisha Nath Bidisha</a> -{" "}
           <a href="mailto:nath@yale.edu">nath@yale.edu</a>
         </li>
       </ul>
