@@ -130,7 +130,6 @@ const links = [
     text: "EMBED NIH Collaboratory Project Page ",
     url: "https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Frethinkingclinicaltrials.org%2Fdemonstration-projects%2Fug3-project-pragmatic-trial-of-user-centered-clinical-decision-support-to-implement-emergency-department-initiated-buprenorphine-for-opioid-use-disorder-embed%2F&data=04%7C01%7Cterence.dew%40yale.edu%7Ccb8daefb1f1f4a4e178708d9875d5db2%7Cdd8cbebb21394df8b4114e3e87abeb5c%7C0%7C0%7C637689657341588189%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=WuHQoDyTj6duirKSGqLnLIThvuME5Y4SQ23pcB0dsP8%3D&reserved=0",
     color: "#8EB814",
-    img: NIHCollab,
   },
   {
     text: "EMBED Related Publications",
