@@ -78,6 +78,11 @@ const links = [
     color: "#0D96F2",
   },
   {
+    text: "EMBED on MDCalc (app version) ",
+    url: "https://apps.apple.com/us/app/mdcalc-medical-calculators-decision-support/id1001640662",
+    color: "#8EB814",
+  },
+  {
     header: "Additional Resources on ED-Initiated Buprenorphine",
     text: "Yale ED-Initiated Buprenorphine resources ",
     url: "https://medicine.yale.edu/edbup/",
@@ -329,7 +334,7 @@ const IndexPage = () => {
             rel="noreferrer"
             href="https://medicine.yale.edu/profile/bidisha_nath/"
           >Bidisha Nath Bidisha</a> -{" "}
-          <a href="mailto:nath@yale.edu">nath@yale.edu</a>
+          <a href="mailto:bidisha.nath@yale.edu">nath@yale.edu</a>
         </li>
       </ul>
       <h3>
