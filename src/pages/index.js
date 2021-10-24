@@ -332,7 +332,7 @@ const IndexPage = () => {
             target="_blank"
             rel="noreferrer"
             href="https://medicine.yale.edu/profile/bidisha_nath/"
-          >Bidisha Nath Bidisha</a> -{" "}
+          >Bidisha Nath</a> -{" "}
           <a href="mailto:bidisha.nath@yale.edu">nath@yale.edu</a>
         </li>
       </ul>
