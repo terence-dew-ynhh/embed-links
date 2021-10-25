@@ -333,7 +333,7 @@ const IndexPage = () => {
             rel="noreferrer"
             href="https://medicine.yale.edu/profile/bidisha_nath/"
           >Bidisha Nath</a> -{" "}
-          <a href="mailto:bidisha.nath@yale.edu">nath@yale.edu</a>
+          <a href="mailto:bidisha.nath@yale.edu">bidisha.nath@yale.edu</a>
         </li>
       </ul>
       <h3>
